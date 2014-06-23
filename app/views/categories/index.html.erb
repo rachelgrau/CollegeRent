@@ -1,0 +1,34 @@
+<div class = "categoryContainer">
+	<% counter = 0 %>
+	<% @categories.each do |c| %>
+		<% div_id = c.id.to_s + "_div" %>
+		<a href = "/categories/<%= c.id %>" >
+			<div class = "categoryImage" id = <%= div_id %>>
+				<%= image_tag (c.file_name), :id => c.id, :class => "normal" %>
+				<% h1_id = c.id.to_s + "_h1" %>
+				<h1 id = <%= h1_id %>>  </h1>
+				<script>
+					var elem = document.getElementById("<%= c.id %>");
+					elem.onmouseover = function(event) {
+						this.className = "onHover";
+						var elem = document.getElementById("<%= h1_id %>");
+						if ("<%= c.name %>" == "kitchen") {
+							elem.style.marginLeft = "30%";
+						}
+						elem.innerHTML = "<%= c.name %>";
+					}
+					elem.onmouseout = function(event) {
+						this.className = "normal";
+						var elem = document.getElementById("<%= h1_id %>");
+						elem.innerHTML = "";
+					}
+					var headerElem = document.getElementById("<%= h1_id %>");
+					headerElem.onmouseover = function(event) {
+						document.getElementById("<%= c.id %>").className = "onHover";
+						this.innerHTML = "<%= c.name %>";
+					}
+				</script>
+			</div>
+		<a>
+	<% end %>
+</div>

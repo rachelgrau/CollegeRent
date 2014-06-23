@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body {
+	font-family: 'HelveticaNeue-UltraLight', 'HelveticaNeue-Light', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0px;
+}
+
+.logo {
+	//to change to old logo, use width=height=45px and get rid of everything except margin left
+	width: 100px;
+	height: 133px;
+	margin-left: 10px;
+	position: absolute;
+	top: 0;
+	margin-top: 60px;
+}
+
+.headerContainer {
+	/*take this stuff out to make header not sticky*/
+	position: fixed;
+	top: -40px;
+	width: 85%;
+	z-index: 2;
+
+	background-color: rgba(255,255,255, .9);
+	margin-left: 100px;
+	margin-right: 100px;
+	height: 200px;
+	text-align: center;
+	border-bottom: 1px solid gray;
+	min-width: 800px;
+}
+
+.headerContainerSticky {
+	/*take this stuff out to make header not sticky*/
+	position: fixed;
+	
+}
+
+.headerTitle {
+	float: left;
+	margin-top: 120px;
+	font-size: 40px;
+}
+
+.headerLinks {
+	font-family: 'HelveticaNeue-Light'; 
+	margin-top: 140px;
+	float: right;
+}
+
+a.headerLink {
+	padding-right: 15px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+a.headerLink:hover {
+	color: gray;
+}
+
+.drop {
+	position: absolute;
+	background: rgba(256, 256, 256, .8);
+	border: 1px solid gray;
+	margin-top: 20px;
+	left: 0;
+	padding: 10px;
+	width: 80px;
+}
+
+.dropDownItem {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	color: black;
+}
+
+.hidden {
+	display: none;
+}
+
+.active {
+	display: inline;
+}
+
+
