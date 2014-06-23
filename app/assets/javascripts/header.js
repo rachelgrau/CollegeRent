@@ -3,7 +3,6 @@
  * hiddenDivId = when you mouse over onHoverId, this div will appear. 
  */
 function Header(headerId, onHoverId, hiddenDivId) {
-	console.log(numCategories);
 	headerElem = document.getElementById(headerId);
 	fixedPos = false;
 	window.onscroll = function(event) {
