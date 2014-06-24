@@ -65,16 +65,32 @@ body {
 	font-family: 'HelveticaNeue-Light'; 
 	margin-top: 140px;
 	float: right;
+	font-style: none;
 }
 
 a.headerLink {
 	padding-right: 15px;
 	padding-bottom: 10px;
 	position: relative;
+	text-decoration: none;
+}
+
+a.headerLink:link {
+	padding-right: 15px;
+	padding-bottom: 10px;
+	position: relative;
+	text-decoration: none;
 }
 
 a.headerLink:hover {
 	color: gray;
+}
+
+a.headerLink:visited {
+	padding-right: 15px;
+	padding-bottom: 10px;
+	position: relative;
+	color: black;
 }
 
 .drop {

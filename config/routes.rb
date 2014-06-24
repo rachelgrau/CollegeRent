@@ -7,6 +7,7 @@ CollegeRent::Application.routes.draw do
 
    resources :categories
    resources :products
+   resources :blog_posts
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
