@@ -31,17 +31,23 @@ body {
 	/*take this stuff out to make header not sticky*/
 	position: fixed;
 	top: -40px;
-	width: 85%;
-	z-index: 2;
-
+	width: 100%;
+	z-index: 1;
 	background-color: rgba(255,255,255, .9);
 	margin-left: 100px;
 	margin-right: 100px;
 	height: 200px;
+}
+
+.header {
+	position: absolute;
+	top: 0;
+	width: 85%;
+	z-index: 2;
+	height: 200px;
 	text-align: center;
 	border-bottom: 1px solid gray;
-	min-width: 800px;
-}
+	min-width: 800px;}
 
 .headerContainerSticky {
 	/*take this stuff out to make header not sticky*/

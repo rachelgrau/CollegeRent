@@ -9,44 +9,46 @@
 </head>
 <body>
 	<div class = "headerContainer" id = "header">
-		<div class = "headerTitle">
-			<!---COLLEGE RENTAL-->
-			<%= image_tag ("ryfur.png"), :class => "logo", :onclick => "window.location.href = '/';"%>
-		</div>
-		<div class = "headerLinks">
-			<a class = "headerLink" id = "shopLink"> SHOP 
-				<span class = "drop hidden" id = "dropDown">
-					<% categories = Category.all %>
-					<% new_cat = Category.new %>
-					<% new_cat.name = "all" %>
-					<% categories.push(new_cat) %>
-					<% categories.each do |c| %>
-						<div class = "dropDownItem" id = "drop_down_<%= c.id %>"> 
-							<%= c.name %> 
-						</div> 
-						<script>
-							//make menu items change on hover
-							var menuItem = document.getElementById('drop_down_<%= c.id%>');
-							menuItem.onmouseover = function(event) {
-								this.style.color = "gray";
-							}
-							menuItem.onmouseout = function(event) {
-								this.style.color = "black";
-							}
-							menuItem.onclick = function(event) {
-								if ('<%= c.name %>' == "all") {
-									window.location.href = "/products/index.html";
-								} else {
-									window.location.href = "/categories/<%= c.id %>";
+		<div class = "header">
+			<div class = "headerTitle">
+				<!---COLLEGE RENTAL-->
+				<%= image_tag ("ryfur.png"), :class => "logo", :onclick => "window.location.href = '/';"%>
+			</div>
+			<div class = "headerLinks">
+				<a class = "headerLink" id = "shopLink"> SHOP 
+					<span class = "drop hidden" id = "dropDown">
+						<% categories = Category.all %>
+						<% new_cat = Category.new %>
+						<% new_cat.name = "all" %>
+						<% categories.push(new_cat) %>
+						<% categories.each do |c| %>
+							<div class = "dropDownItem" id = "drop_down_<%= c.id %>"> 
+								<%= c.name %> 
+							</div> 
+							<script>
+								//make menu items change on hover
+								var menuItem = document.getElementById('drop_down_<%= c.id%>');
+								menuItem.onmouseover = function(event) {
+									this.style.color = "gray";
 								}
-							}
-						</script>
-					<% end %>
-				</span>
-			</a>
-			<a class = "headerLink"> BLOG </a>
-			<a class = "headerLink"> ABOUT </a>
-			<a class = "headerLink"> SIGN IN </a> 
+								menuItem.onmouseout = function(event) {
+									this.style.color = "black";
+								}
+								menuItem.onclick = function(event) {
+									if ('<%= c.name %>' == "all") {
+										window.location.href = "/products/index.html";
+									} else {
+										window.location.href = "/categories/<%= c.id %>";
+									}
+								}
+							</script>
+						<% end %>
+					</span>
+				</a>
+				<a class = "headerLink"> BLOG </a>
+				<a class = "headerLink"> ABOUT </a>
+				<a class = "headerLink"> SIGN IN </a> 
+			</div>
 		</div>
 	</div>
 	<script>
