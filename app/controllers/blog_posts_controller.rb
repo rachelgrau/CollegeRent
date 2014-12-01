@@ -1,4 +1,3 @@
-#test comment
 class BlogPostsController < ApplicationController
 	#display all blog posts
 	def index
