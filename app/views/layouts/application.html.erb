@@ -46,7 +46,7 @@
 					</span>
 				</a>
 				<%= link_to "BLOG", {:controller => "blog_posts", :action => "index"}, :class => "headerLink" %>
-				<a class = "headerLink"> ABOUT </a>
+				<%= link_to "ABOUT", {:controller => "static_pages", :action => "about"}, :class=> "headerLink" %>
 				<%= link_to "SIGN IN", {:controller => "user_sessions", :action => "new"}, :class => "headerLink" %>
 			</div>
 		</div>
