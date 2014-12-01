@@ -1,1 +1,35 @@
-index yooo
+<% if flash.notice %>
+	<div class = "notice">
+		<%= flash.notice %>
+	</div>
+<% end %>
+
+<div class="container">
+	<%= link_to "New Post", {:action => "new"}, :class => "new_post" %>
+	<br />
+	<% @blog_posts.each do |blog_post| %>
+		<!-- Delete button -->
+		<div class = "image">
+			<%= link_to "#{image_tag('x.png', :class => 'x', :onmouseover => '
+				this.src = "/assets/x_hover.png";
+			', :onmouseout => '
+				this.src = "/assets/x.png";
+			')}".html_safe, :controller => "blog_posts", :action => "index", :id => blog_post.id, :delete => true %>
+		</div>
+		<div class = "post_short">	
+			<div class = "title_stuff">
+				<span class = "title">
+					<%= blog_post.title %>
+			    </span> 
+			    <span class = "time">
+			    	<%= get_date_string(blog_post.date_time) %>
+			    </span>
+			</div>
+			
+			<div class = "content">
+				<%= get_content_string(blog_post.content) %>
+			</div>
+		</div>
+	<% end %>
+</div>
+

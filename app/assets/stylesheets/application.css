@@ -47,7 +47,13 @@ body {
 	height: 200px;
 	text-align: center;
 	border-bottom: 1px solid gray;
-	min-width: 800px;}
+	min-width: 800px;
+
+	/*Center horizontally*/
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .headerContainerSticky {
 	/*take this stuff out to make header not sticky*/
@@ -115,6 +121,10 @@ a.headerLink:visited {
 
 .active {
 	display: inline;
+}
+
+.login_form {
+	border: 1px solid gray;
 }
 
 

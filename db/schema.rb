@@ -11,23 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140624213633) do
+ActiveRecord::Schema.define(version: 20140713195920) do
 
   create_table "blog_comment_comments", force: true do |t|
     t.integer  "blog_comment_id"
+    t.datetime "date_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "blog_comments", force: true do |t|
     t.integer  "blog_post_id"
+    t.datetime "date_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "blog_posts", force: true do |t|
+    t.datetime "date_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
+    t.string   "content"
   end
 
   create_table "categories", force: true do |t|
@@ -40,6 +45,7 @@ ActiveRecord::Schema.define(version: 20140624213633) do
 
   create_table "products", force: true do |t|
     t.integer  "category_id"
+    t.datetime "date_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -55,8 +61,13 @@ ActiveRecord::Schema.define(version: 20140624213633) do
   add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
 
   create_table "users", force: true do |t|
+    t.datetime "date_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "username"
+    t.string   "credentials"
+    t.string   "salt"
+    t.string   "password_digest"
   end
 
 end

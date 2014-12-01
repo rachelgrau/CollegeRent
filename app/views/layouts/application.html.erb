@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>College Rent</title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "header" %>
   <%= csrf_meta_tags %>
@@ -47,7 +47,7 @@
 				</a>
 				<%= link_to "BLOG", {:controller => "blog_posts", :action => "index"}, :class => "headerLink" %>
 				<a class = "headerLink"> ABOUT </a>
-				<a class = "headerLink"> SIGN IN </a> 
+				<%= link_to "SIGN IN", {:controller => "user_sessions", :action => "new"}, :class => "headerLink" %>
 			</div>
 		</div>
 	</div>
