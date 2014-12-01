@@ -15,7 +15,8 @@
 				<%= image_tag ("ryfur.png"), :class => "logo", :onclick => "window.location.href = '/';"%>
 			</div>
 			<div class = "headerLinks">
-				<a class = "headerLink" id = "shopLink"> SHOP 
+				<a href = "/categories#index" class = "headerLink" id = "shopLink"> 
+				SHOP 
 					<span class = "drop hidden" id = "dropDown">
 						<% categories = Category.all %>
 						<% new_cat = Category.new %>
