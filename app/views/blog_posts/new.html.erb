@@ -1,0 +1,20 @@
+<% content_for :head do %>
+	<%= javascript_include_tag "blog" %>
+<% end %>
+
+<div class = "container">
+	<div id = "new_blog_post_form">
+		<%= form_for @blog_post, html: {:id => "blog_form"} do |form| %>
+			<div>
+				Title: <input type="text" id = "title_form" name = "blog_post_title">
+			</div>
+			<div>
+				<!-- Post: <input type="text" id = "post" name = "blog_post_text"> -->
+				Post: <textarea id = "post_form" form = "blog_form" name = "blog_post_content"> </textarea>
+			</div>
+			<div id = "create_post_button" > 
+				Submit Blog
+			</div>
+		<% end %>
+	</div>
+</div>
