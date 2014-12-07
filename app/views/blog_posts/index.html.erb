@@ -19,8 +19,10 @@
 		<div class = "post_short">	
 			<div class = "title_stuff">
 				<span class = "title">
-					<%= blog_post.title %>
-			    </span> 
+					<a href="/blog_posts/<%= blog_post.id%>" class = "non_underline">
+						<%= blog_post.title %>
+					</a>
+				</span>
 			    <span class = "time">
 			    	<%= get_date_string(blog_post.date_time) %>
 			    </span>

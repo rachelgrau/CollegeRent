@@ -8,7 +8,12 @@ class BlogPostsController < ApplicationController
 		@blog_posts = BlogPost.order(date_time: :desc)
 	end 
 
+	#display an individual blog post in its entirety
 	def show
+		blogpost = BlogPost.find_by_id(params[:id])
+		@title = blogpost.title
+		@content = blogpost.content
+		@date_time = blogpost.date_time
 	end
 
 	#start a new blog post
