@@ -99,6 +99,14 @@ a.headerLink:visited {
 	color: black;
 }
 
+a.non_underline {
+	text-decoration: none;
+}
+
+a.non_underline:hover {
+	color: gray;
+}
+
 .drop {
 	position: absolute;
 	background: rgba(256, 256, 256, .8);
