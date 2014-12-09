@@ -49,6 +49,14 @@
 	padding-left: 12px;
 }
 
+.post_long {
+	padding-left: 20px;
+	line-height: 180%;
+	/*shrink post horizontally until it's the width of a small mobile phone, then fix width*/
+	max-width: 760px;
+	min-width: 760px;
+}
+
 .image {
 	display: block;
 	float: left;
@@ -90,6 +98,7 @@ img.x:hover {
 	position: relative;
 	margin-bottom: 20px;
 	margin-top: 10px;
+	font-family: 'HelveticaNeue-Light', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
